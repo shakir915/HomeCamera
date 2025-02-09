@@ -5,6 +5,9 @@ plugins {
 }
 
 android {
+
+
+
     namespace = "shakir.kadakkadan.home.camera"
     compileSdk = 35
 
@@ -19,6 +22,11 @@ android {
     }
 
     buildTypes {
+
+        debug {
+            isMinifyEnabled =  false
+            isDebuggable =  true
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
@@ -58,4 +66,10 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation (libs.androidx.core.splashscreen)
+//    implementation("com.corundumstudio.socketio:netty-socketio:1.7.23")
+//    implementation("io.netty:netty-all:4.1.97.Final")
+//    implementation("org.slf4j:slf4j-simple:2.0.7")
+//    implementation("org.slf4j:slf4j-api:2.0.7")
+//    implementation("io.socket:socket.io-client:2.0.1")
+
 }
