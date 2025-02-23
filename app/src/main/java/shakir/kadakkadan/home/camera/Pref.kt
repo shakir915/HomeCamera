@@ -99,7 +99,18 @@ object Pref {
             it.putFloat("rotationAngle", value)
         }
 
+    var isServer: Boolean
+        get() = preferences.getBoolean("isServer", true)
+        set(value) = preferences.edit {
+            it.putBoolean("isServer", value)
+        }
 
+
+    var isServerClientSelected: Boolean
+        get() = preferences.getBoolean("isServerClientSelected", false)
+        set(value) = preferences.edit {
+            it.putBoolean("isServerClientSelected", value)
+        }
 
 
 }
